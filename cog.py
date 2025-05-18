@@ -233,8 +233,8 @@ class claim(commands.GroupCog):
             f"Failed to create an emerald {ball.country} ball. Missing: {missing_text}"
          )
 
-    # this is to manualy renove every collector cards who now doesent met req now
-    # you have to run this each time you make a new speecial so emerelad get deleted
+    # this is to manualy remove every collector cards who now doesent met req now
+    # you have to run this each time you make a new special so emerelad get deleted
     # ik this is funky But i change this soon           
     @app_commands.command()
     @app_commands.checks.has_any_role(*settings.root_role_ids, *settings.admin_role_ids)
