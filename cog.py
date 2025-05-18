@@ -201,7 +201,7 @@ class claim(commands.GroupCog):
                     # Check if this ball type exists with this special
                     exists = await BallInstance.filter(ball=ball, special=special).exists() 
                     
-                    # If this ball type doesn't exist with this special, use shinies instead
+                    # If this ball type doesn't exist with this special, use shinies aka extra shiny
                     if not exists:
                         shiny_substitutes += required_count
                         continue
@@ -292,7 +292,7 @@ class claim(commands.GroupCog):
                 await instance.delete()
                 purged += 1
                 
-                # Try to notify the user about the purge
+                # Try to notify the user about the this 
                 try:
                     user = await self.bot.fetch_user(player.discord_id)
                     await user.send(f"Your {special_name.lower()} {ball.country} ball has been removed because you no longer meet the requirements.")
