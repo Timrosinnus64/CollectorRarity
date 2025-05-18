@@ -2,7 +2,7 @@
 ## Step 1
 
 Create a new folder in `ballsdex/packages` called collector 
-download the repo then paste `` __init__.py`, ``cog.py`, and `constants.py` files into collector folder.
+download the repo then paste `__init__.py`, `cog.py` and `constants.py` files into collector folder.
 folder you made
 
 ## Step 2
