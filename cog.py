@@ -20,7 +20,7 @@ if TYPE_CHECKING:
 
 class claim(commands.GroupCog):
     """
-    Collector commands for special balls creation.
+    Collector commands.
     """
 
     def __init__(self, bot: "BallsDexBot"):
