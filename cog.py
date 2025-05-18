@@ -67,7 +67,7 @@ class claim(commands.GroupCog):
 
         elif current_count >= required:      
             await BallInstance.create(
-            ball=ball,  # Use ball instead of countryball
+            ball=ball,  
             player=player,
             attack_bonus=0,
             health_bonus=0,
@@ -104,7 +104,8 @@ class claim(commands.GroupCog):
 
         shiny_balls = await BallInstance.filter(player=player, ball=ball, special=Shiny).all()
         current_count = len(shiny_balls)
-
+        # This is where you define How many shinies a ball should require
+        # i set the minimum to 25 means it wont go higher then 25
         required = min(25, round(10 * ball.rarity))    
 
         if current_count >= required:
@@ -147,7 +148,6 @@ class claim(commands.GroupCog):
         await interaction.response.defer(ephemeral=True)
     
         # Get all tradeable special types
-       # Shiny = await Special.get(name="Shiny")
         excluded_names = [SPECIAL_NAMES["SHINY"], SPECIAL_NAMES["EMERALD"]]
         required_specials = await Special.filter(tradeable=True).exclude(name__in=excluded_names).all()
       
@@ -232,7 +232,10 @@ class claim(commands.GroupCog):
          await interaction.followup.send(
             f"Failed to create an emerald {ball.country} ball. Missing: {missing_text}"
          )
-             
+
+    # this is to manualy renove every collector cards who now doesent met req now
+    # you have to run this each time you make a new speecial so emerelad get deleted
+    # ik this is funky But i change this soon           
     @app_commands.command()
     @app_commands.checks.has_any_role(*settings.root_role_ids, *settings.admin_role_ids)
     @app_commands.choices( 
