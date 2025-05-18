@@ -220,7 +220,7 @@ class claim(commands.GroupCog):
             
                 if shiny_count < required_shinies:
                     meets_all_requirements = False
-                    missing_requirements.append(("shiny", shiny_count, required_shinies))
+                    missing_requirements.append(("Extra shiny", shiny_count, required_shinies))
                     
             # Create the emerald ball if all requirements are met
             if meets_all_requirements:
