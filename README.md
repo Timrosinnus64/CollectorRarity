@@ -2,7 +2,7 @@
 ## Step 1
 
 Create a new folder in `ballsdex/packages` called collector 
-download the repo then paste `` __init__.py`, `` cog.py`, and `costents.py` files into collector folder.
+download the repo then paste `` __init__.py`, ``cog.py`, and `constants.py` files into collector folder.
 folder you made
 
 ## Step 2
@@ -14,4 +14,4 @@ package be loaded if got any issues report me by ping on discord or a direct dm
 
 > [!IMPORTANT]
 > You must have special called collector, emerald, diamond for this to work
-> otherwise change the names in consents.py to match specials you want insted
+> otherwise change the names in constants.py to match specials you want insted
